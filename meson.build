@@ -437,7 +437,7 @@ dep_scintilla = declare_dependency(
 	include_directories: include_directories('scintilla/include')
 )
 
-if cdata.get('HAVE_FNMATCH')
+if cdata.get('HAVE_FNMATCH') == 1
 	dep_fnmatch = dependency('', required: false)
 else
 	# use fnmatch bundled with ctags
@@ -450,7 +450,7 @@ else
 	dep_fnmatch = declare_dependency(link_with: [fnmatch], include_directories: [ifnmatch])
 endif
 
-if cdata.get('HAVE_REGCOMP')
+if cdata.get('HAVE_REGCOMP') == 1
 	dep_regex = dependency('', required: false)
 else
 	# use regcomp bundled with ctags
