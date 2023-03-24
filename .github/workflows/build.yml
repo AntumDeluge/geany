@@ -30,7 +30,7 @@ env:
 jobs:
   linux:
     name: Linux Build (BINRELOC=${{ matrix.binreloc }})
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     strategy:
       fail-fast: false
@@ -107,7 +107,7 @@ jobs:
 
   linux-meson:
     name: Linux Meson Build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     strategy:
       fail-fast: false
@@ -172,7 +172,7 @@ jobs:
 
   mingw64:
     name: Mingw-w64 Build (Windows)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     env:
       INFRASTRUCTURE_PATH:      ${{ github.workspace }}/.infrastructure
