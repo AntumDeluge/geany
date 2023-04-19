@@ -25,6 +25,7 @@ Makefile.in
 /build-*/
 /build-aux/
 /build-stamp
+/build_*/
 /codenames
 /config.guess
 /config.h
